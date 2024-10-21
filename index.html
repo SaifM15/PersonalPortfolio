@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saif Mulla | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="C:\Users\riyaj\Desktop\Saif Document\Self Documents\SaifMulla_CV.pdf" download>Download Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section home">
+        <div class="home-content">
+            <div class="text-box">
+                <h1>Hello, I'm Saif Mulla</h1>
+                <p>A passionate full-stack developer with expertise in Java, Spring Boot, and modern frontend technologies. I build scalable and maintainable applications for web and mobile platforms.</p>
+            </div>
+            <div class="image-box">
+                <!-- You can add an image here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <h1>About Me</h1>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="C:\Users\riyaj\Desktop\Saif Document\IMG-20240215-WA0133.jpg" alt="About Me Image">
+            </div>
+            <div class="about-text">
+                <p>
+                    I'm a software developer with a strong foundation in both frontend and backend technologies. I have a proven track record of building responsive, user-friendly applications. With hands-on experience in Java, Spring Boot, and various databases, my passion lies in solving real-world problems with technology.
+                </p>
+                <p>
+                    My journey began with a BCA, followed by an MCA, which further solidified my skills in computer science. I’ve worked on projects like eCommerce systems, job portals, and real-time weather monitoring systems. I believe in continuous learning and strive to improve my skills every day.
+                </p>
+                <p>
+                    From building elegant user interfaces to designing robust backend architectures, I take pride in every aspect of development.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <h1>Skills</h1>
+        <div class="skills-wrapper">
+            <!-- Frontend -->
+            <div class="skill-category frontend">
+                <h2>Frontend</h2>
+                <ul>
+                    <li><i class="fab fa-html5"></i> HTML</li>
+                    <li><i class="fab fa-css3-alt"></i> CSS</li>
+                    <li><i class="fab fa-js-square"></i> JavaScript</li>
+                    <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
+                    <li><i class="fas fa-file-code"></i> Thymeleaf</li>
+                </ul>
+            </div>
+            <!-- Backend -->
+            <div class="skill-category backend">
+                <h2>Backend</h2>
+                <ul>
+                    <li><i class="fab fa-java"></i> Java</li>
+                    <li><i class="fas fa-cogs"></i> Spring Boot</li>
+                    <li><i class="fas fa-code-branch"></i> Spring MVC</li>
+                    <li><i class="fas fa-database"></i> Hibernate JPA</li>
+                </ul>
+            </div>
+            <!-- Database -->
+            <div class="skill-category database">
+                <h2>Database</h2>
+                <ul>
+                    <li><i class="fas fa-database"></i> MySQL</li>
+                    <li><i class="fas fa-database"></i> MongoDB</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <h1>Projects</h1>
+        <div class="projects-gallery">
+            <div class="project-item" onclick="openProjectPage('ecommerce.html')">
+                <img src="C:\Users\riyaj\Desktop\Saif Document\PortFolio\ecommerce1.png" alt="eCommerce System">
+                <div class="overlay">
+                    <h3>eCommerce System</h3>
+                    <p>Click for details.</p>
+                </div>
+            </div>
+            <div class="project-item" onclick="openProjectPage('job-portal.html')">
+                <img src="C:\Users\riyaj\Desktop\Saif Document\PortFolio\job.jpg" alt="Job Portal">
+                <div class="overlay">
+                    <h3>Job Portal</h3>
+                    <p>Click for details.</p>
+                </div>
+            </div>
+            <div class="project-item" onclick="openProjectPage('food-ordering.html')">
+                <img src="C:\Users\riyaj\Desktop\Saif Document\PortFolio\foo.jpg" alt="Food Ordering System">
+                <div class="overlay">
+                    <h3>Online Food Ordering System</h3>
+                    <p>Click for details.</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <h1>Contact Me</h1>
+        <form id="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Saif Mulla. All Rights Reserved.</p>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/saif-mulla" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/saifmulla" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/saifmulla" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Resume download functionality
+        document.getElementById("download-resume").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default anchor click behavior
+            const link = document.createElement("a");
+            link.href = "C:\Users\riyaj\Desktop\Saif Document\Self Documents\SaifMulla_CV.pdf"; // Ensure this file path is correct
+            link.download = "Saif_Mulla_Resume.pdf"; // Set the name for the downloaded file
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+
+        function openProjectPage(page) {
+            window.open(page, '_blank'); // Open project detail page in a new tab
+        }
+    </script>
+</body>
+</html>
